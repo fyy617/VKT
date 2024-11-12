@@ -26,11 +26,11 @@ The Brain Tumor Dataset is a publicly available dataset published on Kaggle as t
 Brain Tumor: 2,513 images of brain scans from patients diagnosed with brain tumors.
 Healthy: 2,087 images of brain scans from healthy individuals.
 
-
 ## Brain MRI
 This dataset is a publicly available dataset from Kaggle. It is a four-classification dataset of brain tumor MRI released by Sartaj Bhuvaji et al. of the National Institute of Technology Durgapur, India in July 2020. The dataset is divided into the following four categories: 926 images of glioma tumor, 937 images of meningioma tumor, 396 images of no tumor, and 901 images of pituitary tumor, a total of 3160 images.
-(https://www.kaggle.com/datasets/preetviradiya/brian-tumor-dataset)
+
 ![image](https://github.com/user-attachments/assets/3f885038-2601-457a-aad2-e8c46b45eb87)
+(https://www.kaggle.com/datasets/preetviradiya/brian-tumor-dataset)
 
 ## CPN X-ray  (Covid19-Pneumonia-Normal Chest X-Ray Images)
 Shastri et al collected a large number of publicly available and domain recognized X-ray images from the Internet, resulting in CPN-CX. The CPN-CX dataset is divided into 3 categories, namely COVID, NORMAL and PNEUMONIA. All images are preprocessed and resized to 256x256 in PNG format. It helps the researcher and medical community to detect and classify COVID19 and Pneumonia from Chest X-Ray Images using Deep Learning [Dataset URL](https://data.mendeley.com/datasets/dvntn9yhd2/1).![imgs_02](https://github.com/YubiaoYue/MedMamba/assets/141175829/996035b3-2dd5-4c01-b3d4-656f2bf52307)
