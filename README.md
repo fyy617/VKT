@@ -1,19 +1,24 @@
 #  🎇 VKA 🎇
 VKA: Vision KAN-Attention Model for Disease Diagnosis and Preoperative Prediction
 
-
-
+This paper proposes an innovative dual-branch architecture VKA. We introduce the ConvKan-LG Attention module, which contains the ConvKan branch (consisting of the convolutional BCBR module and the TCKAN module) and the LG Attention branch (an improved local-global attention mechanism). This structure can not only flexibly capture fine details, but also more effectively extract local and global information. Experimental results show that the classification and prediction accuracy of VKA on five datasets exceeds that of advanced models such as MedMamba and Mambaout.
+! [text ] ( C:/Users/33086/Desktop/论文/vka/图文件/net.jpg)
 
 # 📌Installation📌
-* `pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117`
 * `pip install packaging`
 * `pip install timm==0.4.12`
 * `pip install pytest chardet yacs termcolor`
 * `pip install submitit tensorboardX`
 * `pip install triton==2.0.0`
-* `pip install causal_conv1d==1.0.0  # causal_conv1d-1.0.0+cu118torch1.13cxx11abiFALSE-cp38-cp38-linux_x86_64.whl`
-* `pip install mamba_ssm==1.0.1  # mmamba_ssm-1.0.1+cu118torch1.13cxx11abiFALSE-cp38-cp38-linux_x86_64.whl`
+* `pip install addict==2.4.0`
+* `pip install dataclasses`
+* `pip install pyyaml`
+* `pip install albumentations`
+* `pip install tensorboardX`
 * `pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs`
+* `pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117`
+
+
 ## 📜Other requirements📜:
 * Linux System
 * NVIDIA GPU
@@ -42,6 +47,12 @@ The data is collected using endoscopic equipment at Vestre Viken Health Trust (V
 
 
 ## Train
-We use batch size of 4096 by default and we show how to train models with 8 GPUs. For multi-node training, adjust `--grad-accum-steps` according to your situations.
+
+```
+python train.py
+```
 
 ## Test
+```
+python test.py
+```
