@@ -12,7 +12,7 @@ from glob import glob
 from tqdm import tqdm
 import thop  
 from torchvision import transforms, datasets
-from model import VKA as vka 
+from vka_model import VKA as vka 
 
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
