@@ -47,20 +47,20 @@ def main():
                                                   num_workers=nw)
 
     print("using {} images for training, {} images for validation.".format(train_num, val_num))
-    net = vka(num_classes=2)#
+    net = vka(num_classes=num_classes)#
     print(net)
     net.to(device)
 
     input_tensor = torch.randn(1, 3, 224, 224).to(device)
     macs, params = thop.profile(net, inputs=(input_tensor,))
-    flops, params = thop.clever_format([macs, params], "%.3f")  # 格式化输出
+    flops, params = thop.clever_format([macs, params], "%.3f")  
     print(f'Model Parameters: {params}')
     print(f'Model FLOPs: {flops}')
     loss_function = nn.CrossEntropyLoss()
     optimizer = optim.Adam(net.parameters(), lr=0.0001)
     epochs = 100
     best_acc = 0.0
-    save_path = 'vka-b=8-613tumor.pth'
+    save_path = 'vka.pth'
     train_steps = len(train_loader)
     for epoch in range(epochs):
         # train
