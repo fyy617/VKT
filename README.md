@@ -47,7 +47,7 @@ The data is collected using endoscopic equipment at Vestre Viken Health Trust (V
 
 
 ## Train
-
+To train the model, we used the PyTorch deep learning framework and selected the Adam optimizer to optimize the model parameters. Specifically, we used normalization for data preprocessing, set the initial learning rate to 0.0001, β_1 to the default value of 0.9, β_2 to the default value of 0.999, and used CrossEntropyLoss to calculate the loss function. During training, the batch size was set to 8, and iterative training was performed in a training cycle of 100 epochs.
 ```
 python train.py
 ```
