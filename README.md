@@ -4,6 +4,9 @@ VKA: Vision KAN-Attention Model for Disease Diagnosis and Preoperative Predictio
 This paper proposes an innovative dual-branch architecture VKA. We introduce the ConvKan-LG Attention module, which contains the ConvKan branch (consisting of the convolutional BCBR module and the TCKAN module) and the LG Attention branch (an improved local-global attention mechanism). This structure can not only flexibly capture fine details, but also more effectively extract local and global information. Experimental results show that the classification and prediction accuracy of VKA on five datasets exceeds that of advanced models such as MedMamba and Mambaout.
 
 
+
+![image](https://github.com/user-attachments/assets/94ae6fc0-725e-40f8-a877-438b4f21bfd8)
+
 # 📌Installation📌
 * `pip install packaging`
 * `pip install timm==0.4.12`
@@ -26,6 +29,34 @@ This paper proposes an innovative dual-branch architecture VKA. We introduce the
 
 
 # 📊Datasets📊
+The dataset format is as follows：
+```
+├── datasets
+│   ├── Brain
+│     ├── class1
+│           ├── 1.png
+|           ├── ...
+|     ├── class2
+│           ├── 1.png
+|           ├── ...
+│   ├── Brain MRI
+│     ├── class1
+│           ├── 1.png
+|           ├── ...
+|     ├── class2
+│           ├── 1.png
+|           ├── ...
+│     ├── class3
+│           ├── 1.png
+|           ├── ...
+|     ├── class4
+│           ├── 1.png
+|           ├── ...
+│   ├──...
+```
+
+
+
 ##  Brain
 The Brain Tumor Dataset is a publicly available dataset published on Kaggle as the "Brain Dataset." This dataset consists of brain scan images from patients diagnosed with brain tumors and healthy individuals. The dataset is divided into training and testing sets, with separate files for features and labels. It contains a total of 4,600 images, categorized into two classes:
 Brain Tumor: 2,513 images of brain scans from patients diagnosed with brain tumors.
