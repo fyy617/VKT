@@ -4,9 +4,6 @@ VKA: Vision KAN-Attention Model for Disease Diagnosis and Preoperative Predictio
 This paper proposes an innovative dual-branch architecture VKA. We introduce the ConvKan-LG Attention module, which contains the ConvKan branch (consisting of the convolutional BCBR module and the TCKAN module) and the LG Attention branch (an improved local-global attention mechanism). This structure can not only flexibly capture fine details, but also more effectively extract local and global information. Experimental results show that the classification and prediction accuracy of VKA on five datasets exceeds that of advanced models such as MedMamba and Mambaout.
 
 
-
-![image](https://github.com/user-attachments/assets/94ae6fc0-725e-40f8-a877-438b4f21bfd8)
-
 # 📌Installation📌
 * `pip install packaging`
 * `pip install timm==0.4.12`
@@ -22,7 +19,7 @@ This paper proposes an innovative dual-branch architecture VKA. We introduce the
 * `pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117`
 
 
-## 📜Other requirements📜:
+## 📜Other requirements📜
 * Linux System
 * NVIDIA GPU
 * CUDA 12.0+
