@@ -9,6 +9,16 @@ import torch.nn.functional as F
 import torch.utils.checkpoint as checkpoint
 from einops import rearrange, repeat
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
+try:
+    from mamba_ssm.ops.selective_scan_interface import selective_scan_fn, selective_scan_ref
+except:
+    pass
+
+try:
+    from selective_scan import selective_scan_fn as selective_scan_fn_v1
+    from selective_scan import selective_scan_ref as selective_scan_ref_v1
+except:
+    pass
 
 DropPath.__repr__ = lambda self: f"timm.DropPath({self.drop_prob})"
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -471,7 +481,6 @@ class Convkan_LGatten(nn.Module):
 
         return output + input
 
-
 class VKALayer(nn.Module):
     def __init__(
         self, 
@@ -542,7 +551,10 @@ class VKA(nn.Module):
         self.patch_embed = PatchEmbed2D(patch_size=patch_size, in_chans=in_chans, embed_dim=self.embed_dim,
             norm_layer=norm_layer if patch_norm else None)
 
+        # WASTED absolute position embedding ======================
         self.ape = False
+        # self.ape = False
+        # drop_rate = 0.0
         if self.ape:
             self.patches_resolution = self.patch_embed.patches_resolution
             self.absolute_pos_embed = nn.Parameter(torch.zeros(1, *self.patches_resolution, self.embed_dim))
