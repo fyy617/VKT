@@ -54,12 +54,12 @@ The dataset format is as follows：
 
 
 
-##  Brain
+##  Brain Tumor Dataset 
 The Brain Tumor Dataset is a publicly available dataset published on Kaggle as the "Brain Dataset." This dataset consists of brain scan images from patients diagnosed with brain tumors and healthy individuals. The dataset is divided into training and testing sets, with separate files for features and labels. It contains a total of 4,600 images, categorized into two classes:
 Brain Tumor: 2,513 images of brain scans from patients diagnosed with brain tumors.
 Healthy: 2,087 images of brain scans from healthy individuals.
 
-## Brain MRI
+## Brain Tumor Classification (MRI)
 This dataset is a publicly available dataset from Kaggle. It is a four-classification dataset of brain tumor MRI released by Sartaj Bhuvaji et al. of the National Institute of Technology Durgapur, India in July 2020. The dataset is divided into the following four categories: 926 images of glioma tumor, 937 images of meningioma tumor, 396 images of no tumor, and 901 images of pituitary tumor, a total of 3160 images.
 
 ![image](https://github.com/user-attachments/assets/3f885038-2601-457a-aad2-e8c46b45eb87)
