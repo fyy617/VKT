@@ -1,8 +1,11 @@
 #  🎇 VKT 🎇
 VKT: A Hybrid Vision KAN-Transformer Model for Medical Image Classification
 
+The VKT architecture synergistically integrates KAN and Transformer within a dual-branch structure: the ConvKan branch and the LG Attention branch. The ConvKan branch leverages a convolutional BCBR module and TCKan module to strengthen cross-channel interactions via parallel Token Kan and Channel Kan operations. Meanwhile, the LG Attention branch introduces an innovative combination of Local Attention and Global Attention mechanisms, effectively capturing fine-grained structures and global semantic information in images.
 
+![image](https://github.com/user-attachments/assets/a01eb641-f08e-4645-b15c-afcc3167fed4)
 
+![image](https://github.com/user-attachments/assets/4d4fb17f-cf30-4669-be7e-ffb29f270c61)
 
 # 📌Installation📌
 * `pip install packaging`
@@ -78,9 +81,4 @@ The data is collected using endoscopic equipment at Vestre Viken Health Trust (V
 To train the model, we used the PyTorch deep learning framework and selected the Adam optimizer to optimize the model parameters. Specifically, we used normalization for data preprocessing, set the initial learning rate to 0.0001, β_1 to the default value of 0.9, β_2 to the default value of 0.999, and used CrossEntropyLoss to calculate the loss function. During training, the batch size was set to 8, and iterative training was performed in a training cycle of 100 epochs.
 ```
 python train.py
-```
-
-## Test
-```
-python test.py
 ```
