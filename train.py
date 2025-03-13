@@ -12,7 +12,7 @@ from glob import glob
 from tqdm import tqdm
 import thop  
 from torchvision import transforms, datasets
-from vka_model import VKA as vka 
+from vkt_model import VKT as vkt
 
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -47,7 +47,7 @@ def main():
                                                   num_workers=nw)
 
     print("using {} images for training, {} images for validation.".format(train_num, val_num))
-    net = vka(num_classes=num_classes)#
+    net = vkt(num_classes=num_classes)#
     print(net)
     net.to(device)
 
@@ -60,7 +60,7 @@ def main():
     optimizer = optim.Adam(net.parameters(), lr=0.0001)
     epochs = 100
     best_acc = 0.0
-    save_path = 'vka.pth'
+    save_path = 'vkt.pth'
     train_steps = len(train_loader)
     for epoch in range(epochs):
         # train
