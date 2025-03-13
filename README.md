@@ -54,7 +54,17 @@ The dataset format is as follows：
 |           ├── ...
 │   ├──...
 ```
+##  The Augemnted_ocular_diseases Dataset
+The Augemnted_ocular_diseases (AOD) dataset is hosted in Kaggle . It contains 14813 JPEG images. Its resolution varies from 1444× 1444 to 3456×2304. The images are divided into eight categories: AMD (2128 images), Cataract (2344 images), Diabetes (1608 images), Glaucoma (2272 images), Hypertension (1024 images), Myopia (1856 images), Normal (2873 images), Other (708 images). 
+https://www.kaggle.com/datasets/nurmukhammed7/augemnted-ocular-diseases
 
+##  MED-NODE
+The images of the MED-NODE dataset are from the Department of Dermatology, University Medical Center Groningen, Netherlands, and are hosted on the website . It contains 70 JPEG dermoscopic images with resolutions ranging from 201×257 to 3177×1333. The images are divided into two categories: melanoma (70 images) and naevus (100 images). 
+  https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/complete_mednode_dataset.zip
+
+##   Breast Ultrasound Image (BUSI)
+Breast Ultrasound Image (BUSI) is a classification and segmentation dataset containing breast ultrasound images . The dataset consists of 780 PNG images with resolutions ranging from 310×190 to 719×190. The images are divided into three categories: normal (437 images), benign (210 images), and malignant (133 images).
+  https://scholar.cu.edu.eg/?q=afahmy/pages/dataset
 
 
 ##  Brain Tumor Dataset 
